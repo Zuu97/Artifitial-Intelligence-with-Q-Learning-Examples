@@ -70,7 +70,7 @@ class FrozenLake(object):
             time.sleep(1)
             for step in range(max_steps_per_episode):
                 display.clear_output(wait=True)
-                self.env.render()
+                display.display(self.env.render())
                 time.sleep(0.3)
 
                 action = np.argmax(self.q_table[state,:])
@@ -78,7 +78,7 @@ class FrozenLake(object):
 
                 if done:
                     display.clear_output(wait=True)
-                    self.env.render()
+                    display.display(self.env.render())
                     if reward == 1:
                         print("YOU WIN !!!")
                         time.sleep(3)
