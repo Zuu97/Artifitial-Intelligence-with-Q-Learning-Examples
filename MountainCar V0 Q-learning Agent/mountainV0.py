@@ -6,7 +6,7 @@ import random
 from variables import *
 from util import new_state_space
 
-class CartPoleV0Agent(object):
+class MountainV0(object):
     def __init__(self):
         self.env = gym.make(environment)
 
@@ -104,7 +104,7 @@ class CartPoleV0Agent(object):
         self.q_table = np.load(q_table_path)
 
 if __name__ == "__main__":
-    agent =  CartPoleV0Agent()
+    agent =  MountainV0()
     if os.path.exists(q_table_path):
         agent.load_q_table()
     else:
