@@ -57,7 +57,7 @@ class MountainV0(object):
 
             total_rewards_in_episodes.append(episode_reward)
 
-        CartPoleV0Agent.plot_cumulative_rewards(total_rewards_in_episodes,num_episodes)
+        MountainV0.plot_cumulative_rewards(total_rewards_in_episodes,num_episodes)
 
     @staticmethod
     def plot_cumulative_rewards(total_rewards_in_episodes,num_episodes):
